@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+        <meta charset="utf-8">
+        <title>BattleOffice, petites guerres entre amis - Vente privée de jouets Nerfs Elite</title>
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+        <link  rel="icon" type="image/x-icon" href="favicon.png" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/main_new.css') }}">
+
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="navbar">
+            <nav class="white">
+                <div class="nav-wrapper">
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <a href="#!" class="brand-logo">BattleOffice</a>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="picto-nav">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Livraison gratuite</span>
+                                Pour toute commande !
+                            </div>
+                            <div class="picto-nav">
+                                <i class="fas fa-grin"></i>
+                                <span>Garantie 100% Satisfait</span>
+                                Ou remboursé !
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <main class="page">
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="page-footer white">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="color_brand_primary center-align">POUR VOTRE SANTÉ, PRATIQUEZ UNE ACTIVITÉ PHYSIQUE RÉGULIÈRE </h5>
+                        <p class="color_brand_primary center-align">
+                            BattleOffice ne garantit pas la paix dans les bureaux et open-spaces. Il est déconseillé d'utiliser nos produits dans des espaces publiques. Ne déclenchez pas de guerres que vous regretteriez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container color_brand_primary">
+                    © 2023 Tous droits réservés battleoffice
+                    <a class="color_brand_primary right" href="#" target="_blank">Conditions Générales de Vente</a>
+                </div>
+            </div>
+        </footer>
+        <script src="{{ asset('js/materialize.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

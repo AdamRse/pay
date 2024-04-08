@@ -13,13 +13,14 @@ class HomieController extends AbstractController
     public function index(Request $request): Response
     {
         // Ton code ici
-
+        
         return $this->render('landing_page/index_new.html.twig');
     }
-
+    
     #[Route('/confirmation', name: 'confirmation')]
     public function confirmation(): Response
     {
+        $token = $this->getParameter('apitoken');
         return $this->render('landing_page/confirmation.html.twig');
     }
 }

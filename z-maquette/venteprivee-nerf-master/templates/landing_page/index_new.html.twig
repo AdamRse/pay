@@ -1,0 +1,294 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <section class="countdown bg_brand_secondary">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col s12 m12 l5">
+                    <h4 class="center-align"><b>Dépêchez-vous !!</b> Il ne vous reste que</h4>
+                </div>
+                <div class="col s12 m12 l2">
+                    <div class="row center-align">
+                        <div class="time-wrapper col s12 m6">
+                            <span id="minutes" class="color_brand_primary">2</span> Jours
+                        </div>
+                        <div class="time-wrapper col s12 m6">
+                            <span id="seconds" class="color_brand_primary">4</span> Heures
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l5">
+                    <h4 class="center-align ">pour profiter de cette offre !!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <form method="post">
+        <div class="container">
+            <div class="row">
+                <div class="content col s12 m12 l8">
+
+                    <section class="formulas">
+                        <div class="card bg_grey">
+                            <div class="card-content">
+                                <span class="card-title color_product_primary center-align">Étape 1</span>
+                                <p class="h6 center-align">Choisissez votre produit</p>
+                            </div>
+                        </div>
+
+                        <label class="cure-radio">
+                            <input name="order[cart][cart_products][0]" value="2" type="radio">
+                            <article>
+                                <div class="card center-align">
+                                    <div class="row">
+                                        <div class="col s12 m12 l4">
+                                            <div class="image-content">
+                                                <img src="assets/images/nerf1.jpg" alt="10 Nerf Elite Jolt© + 2 offerts" class="responsive-img">
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l4">
+                                            <div class="card-content">
+                                                <p class="h6">
+                                                    10 Nerf© Elite Jolt
+                                                </p>
+                                                <p class="h5 color_brand_secondary">
+                                                    + 4 OFFERTS
+                                                </p>
+                                                <p class="h4">
+                                                    64,90€
+                                                    <span class="h6"><br>au lieu de <del class="h5 color_brand_secondary">94,90€</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l4">
+                                            <div class="card-content">
+                                                <p class="h6 color_brand_secondary">
+                                                    J'économise 30€
+                                                </p>
+                                                <p class="h6">
+                                                    + livraison gratuite
+                                                </p>
+                                                <div class="picto-wrapper">
+                                                    <img src="assets/images/like-product.png" class="responsive-img" alt="Garantie satisfait ou remboursé">
+                                                    <p class="color_brand_primary">Satisfait<br>ou remboursé</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </label>
+                        <label class="cure-radio">
+                            <input name="order[cart][cart_products][0]" value="3" type="radio" checked="checked">
+                            <article>
+                                <div class="card center-align">
+                                    <div class="row">
+                                        <div class="col s12 m12 l4">
+                                            <div class="promo">Offre la plus populaire !</div>
+                                            <div class="image-content">
+                                                <img src="assets/images/nerf2.jpg" alt="14 Nerf© Elite Disruptor + 2 offerts" class="responsive-img">
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l4">
+                                            <div class="card-content">
+                                                <p class="h6">
+                                                    4 Nerf© Elite Disruptor
+                                                </p>
+                                                <p class="h5 color_brand_secondary">
+                                                    + 2 OFFERTS
+                                                </p>
+                                                <p class="h4">
+                                                    51,90€
+                                                    <span class="h6"><br>au lieu de <del class="h5 color_brand_secondary">79,90€</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l4">
+                                            <div class="card-content">
+                                                <p class="h6 color_brand_secondary">
+                                                    J'économise 28€
+                                                </p>
+                                                <p class="h6">
+                                                    + livraison gratuite
+                                                </p>
+                                                <div class="picto-wrapper">
+                                                    <img src="assets/images/like-product.png" class="responsive-img" alt="Garantie satisfait ou remboursé">
+                                                    <p class="color_brand_primary">Satisfait<br>ou remboursé</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </label>
+                        <label class="cure-radio">
+                            <input name="order[cart][cart_products][0]" value="4" type="radio">
+                            <article>
+                                <div class="card center-align">
+                                    <div class="row">
+                                        <div class="col s12 m12 l4">
+                                            <div class="image-content">
+                                                <img src="assets/images/nerf4.jpg" alt="1 Nerf© Elite Rapid Strike" class="responsive-img">
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l4">
+                                            <div class="card-content">
+                                                <p class="h6">
+                                                    1 Nerf© Elite Rapid Strike
+                                                </p>
+                                                <p class="h4">
+                                                    39,90€
+                                                    <span class="h6"><br>au lieu de <del class="h5 color_brand_secondary">59,90€</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l4">
+                                            <div class="card-content">
+                                                <p class="h6 color_brand_secondary">
+                                                    J'économise 20€
+                                                </p>
+                                                <p class="h6">
+                                                    + livraison gratuite
+                                                </p>
+                                                <div class="picto-wrapper">
+                                                    <img src="assets/images/like-product.png" class="responsive-img" alt="Garantie satisfait ou remboursé">
+                                                    <p class="color_brand_primary">Satisfait<br>ou remboursé</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </label>
+                        <h6 class="center-align">OUI ! Je veux profiter de cette offre exceptionnelle et créer une guerre au bureau.</h6>
+                        <p class="center-align">Je bénéficie gratuitement de la garantie <b>100% satisfait ou remboursé</b><br>A tous moment durant ma cure, je peux retourner mes Nerfs et me faire rembourser immédiatement.</p>
+                    </section>
+                    <section class="benefices">
+                        <h5 class="center-align color_product_primary">POURQUOI NERF EST AUSSI POPULAIRE EN OPEN SPACE</h5>
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title color_product_primary">Qu'est ce que Nerf ?</span>
+                                <p>
+                                    Les premiers modèles comprenaient la gamme Dart Tag (utilisée en compétition, et l'une des plus anciennes) et la gamme N-Strike. Depuis, plusieurs gammes ont été commercialisées : Zombie Strike (de couleur verte), Rebelle (marketés envers un public féminin), Élite et Élite XD (les plus puissantes), et Vortex (tirant des disques et possédant un modèle automatique appelé Nitron).
+                                </p>
+                                <p>
+                                    Des accessoires peuvent compléter le blaster, comme les viseurs, les crosses, et les rallonges de canon.
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col s12 l6">
+                                    <div class="card-content">
+                                        <span class="card-title color_product_primary">Bienfaits :</span>
+                                        <ul>
+                                            <li>✔ Favorise la vengeance entre collègues</li>
+                                            <li>✔ Aide à combattre l'injustice</li>
+                                            <li>✔ Favorise le respect de chacun</li>
+                                            <li>✔ Aide à traiter la dépression, la nervosité</li>
+                                            <li>✔ Calme les esprits révolutionnaires</li>
+                                            <li>✔ Aide à réduire les après-midi ennuyeuses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col s12 l6">
+                                    <div class="card-content">
+                                        <span class="card-title color_product_primary">Nos Conseils :</span>
+                                        <b>Conseils d’utilisation :</b>
+                                        <p>Toujours viser la tête</p>
+                                        <b>Soyez tactiques :</b>
+                                        <p>
+                                            Il est possible de tenter de créer des situations qu’on pense qui ne seront pas en faveur de notre adversaire. Par exemple,
+
+                                            Prendre une garde gauche ou droite;
+                                            Effectuer des déplacements qui seront déstabilisants pour l’adversaire;
+                                            Utiliser un rythme qui désavantage l’adversaire selon son style de combattant;
+                                            Intimider l’adversaire par son attitude ou son regard.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="banner">
+                        <div class="row">
+                            <div class="col m5ths s6">
+                                <div class="picto-wrapper center-align">
+                                    <img src="assets/images/france.png" class="responsive-img" alt="Fabriqué en France">
+                                    <p class="color_brand_primary">Fabriqué<br><b>en France</b></p>
+                                </div>
+                            </div>
+                            <div class="col m5ths s6">
+                                <div class="picto-wrapper center-align">
+                                    <img src="assets/images/naturel.png" class="responsive-img" alt="100% naturel">
+                                    <p class="color_brand_primary">100%<br><b>Ecologique</b></p>
+                                </div>
+                            </div>
+                            <div class="col m5ths s6">
+                                <div class="picto-wrapper center-align">
+                                    <img src="assets/images/secure.png" class="responsive-img" alt="Paiement sécurisé">
+                                    <p class="color_brand_primary">Paiement<br><b>sécurisé</b></p>
+                                </div>
+                            </div>
+                            <div class="col m5ths s6">
+                                <div class="picto-wrapper center-align">
+                                    <img src="assets/images/chrono.png" class="responsive-img" alt="Votre commande est traitée en moins de 24h">
+                                    <p class="color_brand_primary">Livraison<br><b>Colis suivi</b></p>
+                                </div>
+                            </div>
+                            <div class="col m5ths s6">
+                                <div class="picto-wrapper center-align">
+                                    <img src="assets/images/like.png" class="responsive-img" alt="Paiement sécurisé">
+                                    <p class="color_brand_primary">100% Satisfait<br><b>ou remboursé</b></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="banner">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col s12 l4">
+                                    <div class="card-content picto-wrapper center-align">
+                                        <img src="assets/images/chrono-big.png" class="responsive-img" alt="Votre commande est traitée en moins de 24h">
+                                        <p class="color_brand_primary">Livraison<br><b>Colis suivi</b></p>
+                                    </div>
+                                </div>
+                                <div class="col s12 l8">
+                                    <div class="card-content">
+                                        <p>Nous nous engageons à livrer votre commande le plus rapidement possible. Généralement, une commande est traitée en moins de 24h. Vous devez donc ensuite compter le temps de transport jusqu'à la livraison chez vous (généralement entre 24h et 48h). Les commandes passées le vendredi et le week-end sont traitées et expédiées le lundi qui suit.</p>
+                                        <p>Pour toute livraison de produits extérieure à la France métropolitaine, les délais d'acheminement peuvent être légèrement plus importants.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                {# Sidebar Form #}
+                <aside class="sidebar col s12 m12 l4">
+
+
+                    {% include 'landing_page/partials/form_new.html.twig' %}
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="card-content picto-wrapper center-align">
+                                    <img src="assets/images/like-big.png" class="responsive-img" alt="Garantie satisfait ou remboursé">
+                                    <p class="color_brand_primary">Satisfait<br>ou remboursé</p>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="card-content">
+                                    <p>Les produits BattleOffice bénéficient de la garantie satisfait ou remboursé. Vous pouvez nous retourner vos produits (sauf si la boîte a été ouverte) et nous vous les rembourserons immédiatement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </form>
+{% endblock %}

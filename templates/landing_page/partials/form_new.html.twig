@@ -8,7 +8,7 @@
         margin:0;
     }
 </style>
-
+{{ dump(form.client.f_name) }}
 {# Etape 2 #}
 <div class="card step_2">
     <div class="card-content">
@@ -16,8 +16,8 @@
         <p class="h6 center-align">Remplissez ce formulaire</p>
         <div class="form-wrapper">
             <div class="input-field">
-                <input type="text">
                 <label>Prénom</label>
+                {{ form_widget(form.client.f_name) }}
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
@@ -130,7 +130,7 @@
                 <div class="collapsible-body card-form">
                     <div class="row">
                         <div class="center-align">
-                            <button type="submit" name="order[payment_method]" value="lpmonetico" class="btn-large btn-block waves-effect waves-light">Continuer</button>
+                            <button type="submit" name="order[payment_method]" value="lpmonetico" class="btn-large btn-block waves-effect waves-light">{{ button_label|default('Continuer') }}</button>
                             <p>J'accepte les <a href="https://feelwellshop.com/fr/conditions-generales-de-ventes" target="_blank">conditions générales de vente</a></p>
                             <img class="responsive-img monetico" src="{{ asset('images/paiement-securise-stripe.jpeg') }}" alt="Stripe protège vos achats">
                         </div>
@@ -142,7 +142,7 @@
                 <div class="collapsible-body">
                     <div class="row">
                         <div class="center-align">
-                            <button type="submit" name="order[payment_method]" value="lppaypal" class="btn-large btn-block waves-effect waves-light">Continuer sur PayPal</button>
+                            <button type="submit" name="order[payment_method]" value="lppaypal" class="btn-large btn-block waves-effect waves-light">{{ button_label|default('Continuer sur PayPal') }}</button>
                             <p>J'accepte les <a href="https://feelwellshop.com/fr/conditions-generales-de-ventes" target="_blank">conditions générales de vente</a></p>
                         </div>
                     </div>

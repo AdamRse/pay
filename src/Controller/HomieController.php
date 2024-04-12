@@ -20,6 +20,13 @@ class HomieController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $order->setStatus("WAITING");
+            $order->setPaymentMethod("CB");
+            // $order->setClient($form->get("client"));
+            // $order->setBiling($form->get("biling"));
+            // $order->setShipping($form->get("shipping"));
+            //$form->all()[cart][cart_products][0]
+            //$order->setProduct();
             $em->persist($order);
             $em->flush();
 

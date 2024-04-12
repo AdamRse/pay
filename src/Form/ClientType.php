@@ -16,8 +16,7 @@ class ClientType extends AbstractType
             ->add('l_name')
             ->add('ts', null, [
                 'widget' => 'single_text',
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

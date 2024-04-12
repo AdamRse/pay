@@ -22,6 +22,8 @@ class OrderType extends AbstractType
             //     'widget' => 'single_text',
             // ])
             ->add('client', ClientType::class)
+            ->add('biling', AddressType::class)
+            ->add('shipping', AddressType::class)
             // ->add('client', EntityType::class, [
             //     'class' => Client::class,
             //     'choice_label' => 'id',
@@ -30,10 +32,6 @@ class OrderType extends AbstractType
             //     'class' => Address::class,
             //     'choice_label' => 'id',
             // ])
-            ->add('shipping', EntityType::class, [
-                'class' => Address::class,
-                'choice_label' => 'id',
-            ])
         ;
     }
 

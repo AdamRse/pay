@@ -8,7 +8,6 @@
         margin:0;
     }
 </style>
-{{ dump(form.client.f_name) }}
 {# Etape 2 #}
 <div class="card step_2">
     <div class="card-content">
@@ -21,50 +20,38 @@
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <input type="text">
+                {{ form_widget(form.client.l_name) }}
                 <label>Nom</label>
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <input type="text">
+                {{ form_widget(form.biling.address_line1) }}
                 <label>Adresse</label>
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <input type="text">
+                {{ form_widget(form.biling.address_line2) }}
                 <label>Complément adr.</label>
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <input type="text">
+                {{ form_widget(form.biling.city) }}
                 <label>Ville</label>
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <input type="text">
+                {{ form_widget(form.biling.zipcode) }}
                 <label>Code postal</label>
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <select>
-                    <option>France</option>
-                </select>
+                {{ form_widget(form.biling.country) }}
                 <label>Pays</label>
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <input type="text">
+                {{ form_widget(form.biling.phone) }}
                 <label>Téléphone</label>
-                <div class="form-error"></div>
-            </div>
-            <div class="input-field">
-                <input type="text">
-                <label>Email</label>
-                <div class="form-error"></div>
-            </div>
-            <div class="input-field">
-                <input type="text">
-                <label>Confirmation email</label>
                 <div class="form-error"></div>
             </div>
         </div>
@@ -73,7 +60,8 @@
         <li>
             <div class="collapsible-header"><i class="material-icons">markunread_mailbox</i>Adresse de livraison différente ?</div>
             <div class="collapsible-body">
-                <div class="input-field">
+                {{ form_row(form.shipping) }}
+                {# <div class="input-field">
                     <input type="text">
                     <label>Prénom</label>
                     <div class="form-error"></div>
@@ -114,7 +102,7 @@
                     <input type="text">
                     <label>Téléphone</label>
                     <div class="form-error"></div>
-                </div>
+                </div> #}
             </div>
         </li>
     </ul>
